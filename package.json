@@ -2,10 +2,13 @@
   "name": "book_inventory_service",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "mocha"
+    "start": "node src/server.js",
+    "test": "mocha",
+    "lint": "jshint --exclude=node_modules/** src/",
+    "test:xunit" : " npm run test -- --reporter xunit",
+    "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +18,7 @@
     "mongodb": "2.2.25"
   },
   "devDependencies": {
+    "jshint": "2.9.4",
     "mocha": "3.2.0",
     "supertest": "3.0.0"
   }
